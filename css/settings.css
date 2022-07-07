@@ -1,0 +1,102 @@
+.settings{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  min-height: var(--min-height-page);
+}
+
+/* <----- SIDE BAR -----> */
+.settings .tabs_bar{
+  width: 15%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  background: var(--color-background);
+  border: 2px solid var(--color-background);
+  border-left: 0;
+  border-right: 0;
+}
+
+.settings .tabs_bar .tab_button{
+  font-size: 1rem;
+  background: transparent;
+  text-align: left;
+  color: var(--color-text);
+  padding: 1rem 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--color-background-light);
+}
+
+.settings .tabs_bar .tab_button:hover{
+  background: var(--color-background-light);
+}
+
+.settings .tab_active{
+  font-weight: bold;
+  border-left: 4px solid var(--color-primary);
+}
+
+
+/* <----- CONTENT -----> */
+.settings .page{
+  display: none;
+}
+
+.settings .page .container{
+  max-width: 500px;
+  width: 100%;
+  background-color: var(--color-background);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+}
+
+.settings .page_active{
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 80vh;
+  border: 2px solid var(--color-background);
+  border-left: 0;
+}
+
+/* <----- FOR MOBILE -----> */
+@media (max-width: 900px) {
+  .settings{
+    width: 100%;
+    align-items: start;
+  }
+
+  .settings .tabs_bar{
+    margin: 0;
+    width: 30%;
+    height: var(--min-height-page);
+    border-radius: 0;
+    background: #eee;
+    color: black;
+    border: none;
+    border-right: 2px solid var(--color-background);
+  }
+
+  .settings .tabs_bar .tab_button:hover{
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .settings .page_active{
+    height: var(--min-height-page);
+    width: 70%;
+    border: none;
+  }
+
+  .settings .page_active .container{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0;
+  }
+}

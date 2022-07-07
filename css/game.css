@@ -1,0 +1,177 @@
+body{
+  position: relative;
+}
+
+.hidden{
+  display: none;
+}
+
+#bot{
+  position: relative;
+  height: var(--min-height-page);
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  background: white;
+}
+
+.talk{
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.talk select, 
+.talk option, 
+.talk #voiceBtn{
+  color: black;
+}
+
+.talk select{
+  width: 100%;
+}
+
+.talk #voiceBtn{
+  border: 1px solid rgb(118, 118, 118);
+}
+
+#body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+}
+
+#body .parent:first-child{
+  margin-top: 0;
+}
+
+.parent:first-child{
+  display: flex;
+}
+
+.parent{
+  width: 50%;
+  display: none;
+  flex-direction: column;
+  transform: rotate(0);
+  transition: 0s;
+}
+
+#body .parent:last-child{
+  animation-name: pop;
+  animation-duration: .3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pop{
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.parent .chat-bubble-container:last-child{
+  display: none;
+}
+
+.chat-bubble-container {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.chat-bubble {
+  font-size: 1.1rem;
+  padding: 1rem;
+  margin-top: 0.8rem;
+  margin-right: 0.9rem;
+  margin-left: 0.9rem;
+  margin-bottom: 1rem;
+  border-radius: var(--border-radius);
+  width: fit-content;
+  text-align: justify;
+}
+
+.msg-self {
+  text-align: end;
+  color: white;
+  background: var(--color-primary);
+  animation-name: in;
+  animation-duration: .3s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes in {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.msg-bot{
+  color: white;
+  background: var(--color-background);
+  width: 100%;
+}
+
+.part{
+  text-align: center;
+}
+
+#bot .story{
+  text-align: left;
+  white-space: pre-wrap;
+  width: calc(100% - 1rem);
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  padding: 0 .5rem;
+  resize: none;
+  background: none;
+  border: none;
+}
+
+.story:focus{
+  outline: none;
+}
+
+.story,
+.options button{
+  margin-top: 1rem;
+}
+
+.options{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.options button{
+  font-size: 1.1rem;
+  font-family: 'Gotham Book', sans-serif;
+  padding: 0.6rem 0.6rem;
+  width: 100%;
+  text-align: left;
+  background: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: var(--color-background-light);
+}
+
+.options button:hover{
+  background: var(--color-primary);
+}
+
+/* || PHONE RESIZING */
+@media(max-width: 900px){ 
+  .parent{
+    width: 100%;
+  }
+}

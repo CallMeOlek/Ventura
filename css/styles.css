@@ -1,0 +1,294 @@
+/* || GENERAL STYLES */
+*{
+  --color-background: #303030; --color-background-light: #505050;
+  --color-primary: #009579; --color-primary-dark: #007f67;
+  --color-error: #cc4444; --color-success: #4bb544;
+
+  --border-radius: 4px;
+  --min-height-page: calc(100vh - 50px);
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Gotham Light', sans-serif;
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+/* Custom Scroll */
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--color-background-light);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #eee;
+  border-radius: 20px;
+  border: 3px solid var(--color-background);
+}
+
+html{
+  overflow-x: hidden;
+}
+
+button{
+  border: none;
+}
+
+body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: var(--min-height-page);
+}
+
+.index{
+  margin: 0.7rem;
+}
+
+.error{
+  color: var(--color-error);
+}
+
+.success{
+  color: var(--color-success);
+}
+
+select:focus{
+  outline: none;
+}
+
+/* || HEADER STYLES */
+.header{
+  width: 100%;
+  height: 50px;
+  display: block;
+  background-color: var(--color-background);
+}
+
+.inner_header{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.inner_header .logo_container{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+}
+
+.inner_header .logo_container a{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: var(--color-text);
+  font-family: 'Gotham Black', sans-serif;
+}
+
+.inner_header .logo_container span{
+  font-family: 'Gotham Thin', sans-serif;
+}
+
+.search_bar{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+
+.inner_search{
+  width: 80%;
+  display: flex;
+  padding: 2px;
+  border-radius: var(--border-radius);
+  border: 2px solid #eeeeee;
+  background-color: #eeeeee;
+}
+
+.inner_search input{
+  width: 100%;
+  margin : 0 auto;
+  font-family: 'Gotham', sans-serif;
+  font-size: 14px;
+  border: none;
+  background: none;
+}
+
+.inner_search input,
+.inner_search i{
+  margin: 0 0;
+  padding: 5px;
+  color: black;
+}
+
+.inner_search:focus-within{
+  background: white;
+  border: 2px solid var(--color-primary);
+}
+
+.search_bar input:focus{
+  outline: none;
+}
+
+.navigation{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+.navigation a{
+  padding: 0 1rem;
+}
+
+.navigation a li{
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-text);
+  font-family: 'Gotham Book', sans-serif;
+  font-size: 1.2rem;
+}
+
+.button_highlight{
+  background-color: var(--color-primary);
+  border-radius: var(--border-radius);
+  padding: 10px;
+}
+
+/* || FOOTER STYLES */
+.footer{
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  padding: 3rem 0;
+  box-sizing: border-box;
+  background-color: var(--color-background);
+}
+
+.inner_footer{
+  display: block;
+  margin: 0 auto;
+  width: 1100px;
+  height: 100%;
+}
+
+.inner_footer .logo_container{
+  width: 35%;
+  float: left;
+  height: 100%;
+  display: block;
+}
+
+.inner_footer .logo_container img{
+  width: 150px;
+  height: auto;
+}
+
+.footer_third{
+  width: calc(21.6666666667% - 20px);
+  margin-right: 1rem;
+  float: left;
+  height: 100%;
+}
+
+.footer_third:last-child{
+  margin-right: 0;
+}
+
+.footer_third h1{
+  font-family: 'Gotham', sans-serif;
+  font-size: 1.5rem;
+  color: var(--color-text);
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.footer_third a{
+  font-family: 'Gotham Light', sans-serif;
+  font-size: 1.2rem;
+  color: var(--color-text);
+  display: block;
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+.footer_third li{
+  display: inline-block;
+  padding: 0 5px;
+  font-size: 20px;
+}
+
+.footer_third a:hover{
+  text-decoration: underline;
+}
+
+/* || PHONE RESIZING */
+@media(max-width: 900px){ 
+
+  *{
+    --min-height-page: calc(100vh - 90px);
+  }
+
+  .header{
+    margin-bottom: +40px;
+  }
+
+  .search_bar{
+    width: 80%;
+  }
+
+  .inner_header .logo_container{
+    margin-left: 15px;
+  }
+
+  .navigation{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    position: absolute;
+    top: 50px;
+    justify-content: center;
+    background: #505050;
+  }
+
+  .navigation a{
+    width: 100%;
+    text-align: center;
+  }
+
+  .navigation a:not(:last-of-type){
+    border-right: 2px solid white;
+  }
+
+  .footer .inner_footer{
+    width: 90%;
+  }
+
+  .inner_footer .logo_container,
+  .footer_third{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .index{
+    margin: .5rem 0;
+  }
+}

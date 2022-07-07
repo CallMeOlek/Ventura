@@ -1,0 +1,187 @@
+.gamepage .inner_main{
+  width: auto;
+  margin-top: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  background: var(--color-background);
+  margin-bottom: 1rem;
+}
+
+.gamepage .inner_main .img-section{
+  display: flex;
+  justify-content: center;
+}
+
+.gamepage .inner_main .img-section img{
+  width: 640px; max-width: 640px; height: 360px; max-height: 360px;
+  border: 3px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  height: auto;
+  object-fit: cover;
+}
+
+.gamepage .inner_main .info-section{
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+  width: 300px;
+  margin-left: 20px;
+}
+
+.gamepage .inner_main .lower{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 100%;
+  height: 100%;
+}
+
+.gamepage .inner_main .info-section .title{
+  font-size: 2.5rem;
+  margin-bottom: .5rem;
+}
+
+.gamepage .inner_main .info-section .play{
+  margin-bottom: 1rem;
+}
+
+.gamepage .form_button{
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.gamepage .inner_main .info-section .interact{
+  display: flex;
+  justify-content: center;
+}
+
+.gamepage .checkbox{
+  padding: 0 .8rem;
+}
+
+.gamepage .checkbox:focus input ~ i{
+  transform: scale(1.1);
+}
+
+.gamepage input:checked ~ i {
+  font-weight: 800;
+}
+
+.gamepage .checkbox i{
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 50;
+  margin-bottom: 5px;
+}
+
+.gamepage form{
+  display: flex;
+}
+
+.gamepage .checkbox i,
+.gamepage .checkbox p{
+  width: 100%;
+  text-align: center;
+}
+
+.gamepage hr{
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.gamepage .description{
+  width: 100%;
+}
+
+.gamepage .description .title{
+  margin-bottom: 1rem;
+}
+
+.gamepage .description textarea{
+  width: 100%;
+  height: auto;
+  resize: none;
+  background-color: var(--color-background);
+  border: none;
+  font-family: 'Gotham', sans-serif;
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+
+.gamepage .description textarea:focus{
+  outline: none;
+}
+
+.gamepage .modal .form_text{
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 900px) {
+  .gamepage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .gamepage .inner_main{
+    width: 100%;
+    margin-top: .5rem;
+  }
+
+  .gamepage .inner_main .row{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .gamepage .inner_main .info-section{
+    margin-top: 1rem;
+    align-items: center;
+    height: calc(200px);
+    width: calc(100% - 2rem);
+    margin-left: 0;
+  }
+
+  .gamepage .info-section .lower{
+    margin-top: 1rem;
+    width: 100%;
+    align-items: center;
+  }
+
+  .gamepage .inner_main .img-section{
+    width: calc(100% - 2rem);
+    height: 100%;
+  }
+
+  .gamepage .inner_main .img-section img{
+    object-fit: cover;
+    width: calc(100% - 2rem); height: 100%;
+  }
+
+  .gamepage .inner_main .info-section a{
+    width: calc(100% - 200px);
+    height: auto;
+  }
+
+  .gamepage .form_button{
+    height: 60px;
+  }
+
+  .gamepage .checkbox i{
+    font-size: 1.5rem;
+  }
+
+  .gamepage .checkbox p{
+    font-size: .8rem;
+  }
+
+  .gamepage .description{
+    margin: 1rem;
+  }
+
+  .gamepage .description textarea{
+    width: calc(100% - 2rem);
+  }
+}

@@ -1,0 +1,128 @@
+/* <----- PROFILE -----> */
+.inner_profile{
+  width: 65%;
+  margin-top: 1rem;
+  display: flex;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  background: var(--color-background);
+}
+
+.inner_profile .image_container{
+  width: 35%;
+  height: 100%;
+  display: block;
+}
+
+.inner_profile .img_container img{
+  object-fit: cover;
+  width: 128px;
+  border-radius: 50%;
+  height: auto;
+}
+
+.inner_profile .container{
+  width: 100%;
+  margin-left: 20px;
+}
+
+.inner_profile .container .info_up li{
+  margin-bottom: .5rem;
+}
+
+.inner_profile .container .info_down{
+  display: flex;
+}
+
+.inner_profile .container .info_down a{
+  padding-right: 5px;
+}
+
+.inner_profile .container .info_down li{
+  margin-top: 3.5rem;
+  padding-right: 2rem;
+  display: inline-flex;
+}
+
+
+/* <----- TABS -----> */
+.profile .tabs_bar{
+  width: calc(65% + 64px);
+  display: flex;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+.profile .tabs_bar .tab_button{
+  width: 50%;
+  display: block;
+  background: none;
+  font-family: 'Gotham', sans-serif;
+  color: var(--color-text);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  background: var(--color-background);
+}
+
+.profile .tabs_bar .tab_button:nth-child(1){
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.profile .tabs_bar .tab_button:last-of-type{
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.profile .tabs_bar .tab_button:hover{
+  background: var(--color-background-light);
+}
+
+.profile .tab_active{
+  font-weight: bold;
+  border-bottom: 4px solid var(--color-primary);
+}
+
+.profile .page_active{
+  width: calc(65% + 64px);
+}
+
+/* <----- FOR MOBILE -----> */
+@media (max-width: 900px) {
+  .profile,
+  .profile .tabs_bar{
+    width: 100%;
+    margin: 0;
+  }
+
+  .profile .page_active{
+    width: 100%;
+    margin: .5rem 0;
+  }
+  
+  .inner_profile{
+    margin-top: 0.5rem;
+    width: 90%;
+  }
+
+  .profile .tabs_bar{
+    margin-top: 0.5rem;
+  }
+
+  .profile .tabs_bar .tab_button{
+    border-radius: none;
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .profile .tabs_bar .tab_button:nth-child(1),
+  .profile .tabs_bar .tab_button:last-of-type{
+    border-radius: 0;
+  }
+}
+
+/* <----- NOT MOBILE -----> */
+@media (min-width: 900px) {
+  .profile .tabs_bar .tab_button{
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+}
