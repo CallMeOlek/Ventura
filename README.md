@@ -4,9 +4,8 @@ Ventura it's a platform for text-based games, that lets you create your own game
 
 ## **How to download?**
 
-1. First you need to download [XAMPP](https://www.apachefriends.org/download.html).
-2. Create a file named **"ventura"** in **"C:\xampp\htdocs"** and extract the project inside it.
-3. Inside [phpMyAdmin](http://localhost/phpmyadmin) import the file named **"database.sql"**.
-4. Now type [localhost/ventura](http://localhost/ventura) in your browser.
-
-**All done, enjoy my work.**
+1. First of all you'll need to download [XAMPP](https://www.apachefriends.org/download.html).
+2. Afterwards, download the ZIP file and extract it inside of **"C:\xampp\htdocs"**.
+3. Next, in [phpMyAdmin](http://localhost/phpmyadmin) import the file named **"database.sql"**.
+4. Now type [localhost/ventura-main](http://localhost/ventura-main) in your browser.
+5. All done, thanks for trying it out!
